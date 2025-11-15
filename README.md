@@ -135,6 +135,11 @@ The backend will require:
 - Python hosting (Heroku, Railway, etc.)
 - Environment variables for API keys
 
+## Configuration
+
+- Frontend builds read `VITE_API_BASE` (see `frontend/.env.example`) to know which backend URL to call. Set this to your deployed API when building on Vercel.
+- Backend deployments read `CORS_ALLOW_ORIGINS` (see `backend/.env.example`) to decide which origins may call the API. Include your Vercel domain so browser requests succeed.
+
 ## API Keys
 
 LUPIN integrates with external services. Get your API keys from:
