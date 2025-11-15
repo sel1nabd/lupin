@@ -126,7 +126,7 @@ The production-ready files will be in `frontend/dist/`
 ### Deployment
 
 The frontend can be deployed to:
-- Vercel
+- Vercel (configured via repository-level `vercel.json` to build from `frontend/` and ship `frontend/dist`)
 - Netlify
 - GitHub Pages
 - Any static hosting service
