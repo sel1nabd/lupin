@@ -1,0 +1,309 @@
+/* Settings Container */
+.settings-container {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fade-in-up var(--duration-base) var(--ease-out-smooth);
+}
+
+.settings-header {
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-lg);
+}
+
+.settings-header h2 {
+  margin: 0 0 var(--space-xs) 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.settings-subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.settings-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: box-shadow var(--duration-base) var(--ease-elegant);
+}
+
+.settings-section:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+/* Theme Section */
+.theme-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.theme-info h3 {
+  margin: 0 0 var(--space-xs) 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.theme-info p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.theme-toggle {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.theme-option {
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-elegant);
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+
+.theme-option:hover {
+  background: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.theme-option.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--bg-primary);
+}
+
+/* API Key Sections */
+.key-info {
+  margin-bottom: var(--space-md);
+}
+
+.key-info h3 {
+  margin: 0 0 var(--space-xs) 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.key-info p {
+  margin: 0 0 var(--space-xs) 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.get-key-link {
+  display: inline-block;
+  color: var(--text-primary);
+  text-decoration: underline;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: color var(--duration-base) var(--ease-elegant);
+}
+
+.get-key-link:hover {
+  color: var(--text-secondary);
+}
+
+.key-input-group {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.key-input {
+  flex: 1;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-family: 'SF Mono', 'Roboto Mono', 'Courier New', monospace;
+  transition: all var(--duration-base) var(--ease-elegant);
+}
+
+.key-input:focus {
+  outline: none;
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.05);
+}
+
+[data-theme='dark'] .key-input:focus {
+  box-shadow: 0 0 0 3px rgba(250, 250, 250, 0.05);
+}
+
+.key-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.toggle-visibility {
+  padding: 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--duration-base) var(--ease-elegant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+.toggle-visibility:hover {
+  background: var(--bg-secondary);
+  border-color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.toggle-visibility:active {
+  transform: translateY(0);
+}
+
+.key-preview {
+  margin-top: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: 'SF Mono', 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+/* Actions */
+.settings-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.save-button,
+.clear-button {
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-elegant);
+  letter-spacing: 0;
+  font-family: inherit;
+}
+
+.save-button {
+  background: var(--primary);
+  color: var(--bg-primary);
+  border-color: var(--primary);
+  flex: 1;
+}
+
+.save-button:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.save-button:active {
+  transform: translateY(0);
+}
+
+.clear-button {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.clear-button:hover {
+  background: var(--bg-secondary);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.clear-button:active {
+  transform: translateY(0);
+}
+
+/* Save Notice */
+.save-notice {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--success);
+  border-radius: var(--radius-md);
+  color: var(--success);
+  font-size: 0.875rem;
+  text-align: center;
+  animation: fade-in var(--duration-base) var(--ease-out-smooth);
+}
+
+/* Settings Note */
+.settings-note {
+  padding: var(--space-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-sm);
+}
+
+.settings-note h4 {
+  margin: 0 0 var(--space-sm) 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.settings-note ul {
+  margin: 0;
+  padding-left: var(--space-lg);
+}
+
+.settings-note li {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
+}
+
+.settings-note li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .theme-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .theme-toggle {
+    width: 100%;
+  }
+
+  .theme-option {
+    flex: 1;
+  }
+}
